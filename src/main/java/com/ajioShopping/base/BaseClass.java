@@ -34,7 +34,7 @@ public class BaseClass {
 			prop = new Properties();
 			System.out.println("super construtor invoked");
 			FileInputStream ip = new FileInputStream(
-					System.getProperty("user.dir")+"\\Configuration\\Cofig.properties");
+					System.getProperty("user.dir")+"/Configuration/Config.properties");
 			prop.load(ip);
 			System.out.println("driver: "+ driver);
 			
@@ -46,9 +46,10 @@ public class BaseClass {
 	}
 	
 	public void launchApp() {
-		WebDriverManager.chromedriver().setup();
+		
 		String browserName = prop.getProperty("browser");
-		if(browserName.contains("Chrome")) {
+		if(browserName.equalsIgnoreCase("Chrome")) {
+			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 			//Set browser to ThreadLocal map
 			//driver.set(new ChromeDriver());
