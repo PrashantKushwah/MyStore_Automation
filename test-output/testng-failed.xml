@@ -3,15 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ajioShopping.testcases.IndexPageTest">
+      <class name="com.ajioShopping.testcases.LoginPageTest">
         <methods>
-          <include name="tearDown"/>
           <include name="loadConfig"/>
-          <include name="testMyLogo"/>
+          <include name="testLogin"/>
           <include name="setup"/>
-          <include name="verifyTitle"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.ajioShopping.testcases.IndexPageTest -->
+      </class> <!-- com.ajioShopping.testcases.LoginPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

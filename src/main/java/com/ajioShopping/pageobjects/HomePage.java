@@ -28,5 +28,9 @@ public class HomePage extends BaseClass {
 	public boolean validateOrderHistory() {
 		return action.isDisplayed(driver, orderHisOption);
 	}
+	
+	public String getURL() {
+		return action.getCurrentURL(driver);
+	}
 
 }
