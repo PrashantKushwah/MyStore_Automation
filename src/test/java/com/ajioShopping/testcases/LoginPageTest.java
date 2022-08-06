@@ -33,6 +33,5 @@ public class LoginPageTest extends BaseClass {
 		String actualURL = homePage.getURL();
 		String expURL = "http://automationpractice.com/index.php?controller=my-account";
 		Assert.assertEquals(actualURL, expURL);
-		
 	}
 }

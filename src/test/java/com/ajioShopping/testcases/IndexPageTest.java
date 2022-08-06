@@ -30,6 +30,7 @@ public class IndexPageTest extends BaseClass {
 		Assert.assertEquals(actTitle, "My Store");
 	}
 	
+	
 	@AfterMethod
 	public void tearDown(){
 		driver.quit();
