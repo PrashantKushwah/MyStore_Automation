@@ -14,7 +14,7 @@ public class ShippingPage extends BaseClass {
 	@FindBy(xpath = "//input[@type=\"checkbox\"]")
 	WebElement termsCondition;
 	
-	@FindBy(xpath = "//span[contains(text(),\"Proceed to checkout\")]")
+	@FindBy(xpath = "(//span[contains(text(),\"Proceed to checkout\")])[2]")
 	WebElement checkOut;
 	
 	public ShippingPage() {
@@ -25,7 +25,7 @@ public class ShippingPage extends BaseClass {
 		action.JSClick(driver, termsCondition);
 	}
 	
-	public PaymentSummaryPage clicCheckOut() {
+	public PaymentSummaryPage clickCheckOut() {
 		action.JSClick(driver, checkOut);
 		return new PaymentSummaryPage();
 	}
