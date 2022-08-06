@@ -32,7 +32,7 @@ public class OrderPage extends BaseClass{
 	}
 	
 	public double totalPrice() {
-		String total = unitPrice.getText();
+		String total = totalPrice.getText();
 		String total1 = total.replaceAll("[^a-zA-Z0-9]","");
 		double totalP = Double.parseDouble(total1);
 		return totalP/100;

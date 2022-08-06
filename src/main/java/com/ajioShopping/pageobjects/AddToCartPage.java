@@ -43,10 +43,12 @@ public class AddToCartPage extends BaseClass{
 	}
 	
 	public boolean validateCart() {
+		action.fluentWait(driver, cartMsg, 10);
 		return action.isDisplayed(driver, cartMsg);
 	}
 	
 	public OrderPage clickCheckout() {
+		action.fluentWait(driver, cartMsg, 10);
 		action.JSClick(driver, checkout);
 		return new OrderPage();
 	}
